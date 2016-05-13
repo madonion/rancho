@@ -1,0 +1,364 @@
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+/*micrrosoft tai le font*/
+@font-face {
+  font-family: 'ctaile';
+  src: url('../fonts/ctaile.eot');
+  src: local('☺'), url('../fonts/ctaile.woff') format('woff'), url('../fonts/ctaile.ttf') format('truetype'), url('../fonts/ctaile.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body{
+  font-family: "ctaile",Helvetica,Arial,SansSerif;
+  color: #484e52;
+  font-size: 2em;
+  a {color:#484e52 !important;}
+}
+p{
+  padding: 0 20px;
+  line-height: 2em;
+  font-size: 1em;
+  text-align: justify;
+
+}
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .masthead,
+  .marketing,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+/* Social */
+.social {
+    margin-top: 10em;
+    padding: 0;
+    ul{
+      float: right;
+      margin: 0;
+      padding: 5px;
+    }
+}
+
+.social ul li {
+    margin: 5px;
+    list-style: none outside none;
+    display: inline-block;
+}
+
+.social i {
+    width: 40px;
+    height: 40px;
+    color: #FFF;
+    background-color: #333;
+    font-size: 22px;
+    text-align:center;
+    padding-top: 12px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    -webkit-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+    -ms-transition: all ease 0.3s;
+}
+
+.social i:hover {
+    color: #FFF;
+    text-decoration: none;
+    transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    -webkit-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+    -ms-transition: all ease 0.3s;
+}
+hr.footer{
+  display: block;
+  margin:  0 4em 5em 4em;
+  border-bottom: 1px solid #484e52;
+}
+footer>div {}
+footer ul { list-style-type: none;}
+.join-us{text-align:right}
+.price-box{background: #ededed;}
+ul.room-icons{list-style-type:none;margin:5px;}
+ul.room-icons li{display: inline;margin:5px;}
+
+/*header*/
+.logo{padding: 2em}
+
+nav.navbar{
+  background: none;
+  border: none;
+}
+.navbar-nav {
+  width: 100%;
+  text-align: center;
+  > li {
+    float: none;
+    display: inline-block;
+    &:after { content: "-"; }
+    &:last-child:after{content: ''}
+    &.active a{
+      background: none !important;
+    }
+    a{
+      font-size: 18px;
+      text-transform: uppercase;
+      display: inline;
+      padding: 10px 20px;
+    }
+  }
+}
+
+
+footer ul {
+  list-style-type: none; font-size: 18px }
+
+/*
+homepage*/
+
+p.description{
+  line-height: 2em;
+  font-size: 1em;
+  text-align: justify;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+.img-link{
+  position: relative;
+  vertical-align: middle;
+  overflow: hidden;
+  span {visibility: hidden;}
+  .overlay{
+    background: rgba(0,0,0,0);
+    display: block;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 15px;
+    right: 15px;
+    transition: 0.5s ease;
+  }
+   &:hover{
+     .overlay{
+       background: rgba(0,0,0,.5);
+       transition: 0.5s ease;
+     }
+     span{
+        visibility: visible;
+        left: 0;
+        position:absolute;
+        text-align:center;
+        top: 50%;
+        width: 100%;
+        color: white;
+        font-size: 48px;
+        font-weight: bold;
+        text-shadow: 1px 3px 2px #000;
+       transition: 0.2s ease;
+      }
+   }
+}
+/*
+about page*/
+.about-container{
+  position: relative;
+  h1{
+    position: absolute;
+    bottom: -.38em;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 10em;
+    font-weight: bold;
+    letter-spacing: 50px;
+    transform:scale(1.4,1);
+    -webkit-transform:scale(1.4,1);
+    right: -.2em;
+  }
+}
+div.about-text{
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+
+/*
+weddings*/
+h2{font-size: 1.1em; font-weight: bold; padding: 2em 1em .5em 1em;}
+ul.dashed{
+  list-style-type: none;
+  padding: 0 1em;
+  li:before {
+    content: "–";
+    padding: 0 1em;
+    line-height: 1.5em;
+  }
+}
+.weddings-container{
+  position: relative;
+  h1{
+    position: absolute;
+    bottom: -.38em;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 10em;
+    font-weight: bold;
+    letter-spacing: 21px;
+    transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    right: .1em;
+  }
+}
+div.weddings-text{
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+
+
+/*
+location*/
+h2{font-size: 1.1em; font-weight: bold; padding: 2em 1em .5em 1em;}
+ul.dashed{
+  list-style-type: none;
+  padding: 0 1em;
+  li:before {
+    content: "–";
+    padding: 0 1em;
+    line-height: 1.5em;
+  }
+}
+.location-container{
+  position: relative;
+  h1{
+    position: absolute;
+    bottom: -.38em;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 10em;
+    font-weight: bold;
+    letter-spacing: 31px;
+    transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    right: .1em;
+  }
+}
+div.location-text{
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+div.location {
+  padding-bottom: 3em;
+  ul {
+    padding: 3em;
+    list-style-type: none;
+    li{padding: .1em 2.5em}
+}}
+
+
+
+
+/*
+press -reviews*/
+h2{font-size: 1.1em; font-weight: bold; padding: 2em 1em .5em 1em;}
+ul.dashed{
+  list-style-type: none;
+  padding: 0 1em;
+  li:before {
+    content: "–";
+    padding: 0 1em;
+    line-height: 1.5em;
+  }
+}
+.press-container{
+  position: relative;
+  h1{
+    position: absolute;
+    bottom: -.38em;
+    display: inline-block;
+    width: 105%;
+    text-align: center;
+    color: white;
+    font-size: 7.3em;
+    font-weight: bold;
+    transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    right: -.2em;
+  }
+}
+div.press-text{
+  padding-top: 2em;
+  padding-bottom: 2em;
+  blockquote{
+    border: none;
+    font-size: 1.5em;
+    line-height: 2;
+    letter-spacing: 5px;
+    text-align: center;
+    padding: .5em 2em 0 2em;
+  }
+}
+div.press {
+  padding-bottom: 3em;
+  ul {
+    padding: 3em;
+    list-style-type: none;
+    li{padding: .1em 2.5em}
+  }}
+
+
+
+/*
+sitemap*/
+div.sitemap{
+  padding: 0 1em 3em 1em;
+}
+
+
+/*
+contact*/
+
+.contact{
+  .row{
+    padding: 3em 2em;
+    .contact-heading{
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-top: 0;
+    }
+    ul{
+      list-style: none;
+      padding: 0;
+      line-height: 3em;
+    }
+  }
+  .form-control{
+    width: 30em;
+    float: right;
+  }
+  .btn{
+    margin: 50px 20px;
+    width: 110px;
+    height: 45px;
+    float: right;
+    font-size: 26px;
+    font-weight: bold;
+    background: #484e52;
+  }
+}
