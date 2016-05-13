@@ -233,15 +233,6 @@ div.weddings-text{
 /*
 location*/
 h2{font-size: 1.1em; font-weight: bold; padding: 2em 1em .5em 1em;}
-ul.dashed{
-  list-style-type: none;
-  padding: 0 1em;
-  li:before {
-    content: "–";
-    padding: 0 1em;
-    line-height: 1.5em;
-  }
-}
 .location-container{
   position: relative;
   h1{
@@ -277,15 +268,6 @@ div.location {
 /*
 press -reviews*/
 h2{font-size: 1.1em; font-weight: bold; padding: 2em 1em .5em 1em;}
-ul.dashed{
-  list-style-type: none;
-  padding: 0 1em;
-  li:before {
-    content: "–";
-    padding: 0 1em;
-    line-height: 1.5em;
-  }
-}
 .press-container{
   position: relative;
   h1{
