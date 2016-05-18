@@ -16,10 +16,10 @@
                 <li class="{{$thisPage == '/'?'active':''}}"><a href="{{ url('/') }}">Home</a></li>
                 {{--<li class="{{$thisPage == 'rooms'?'active':''}}"><a href="{{ url('rooms') }}">Rooms</a></li>--}}
                 <li class="{{$thisPage == 'B&B'?'active':''}}"><a href="{{ url('B&B') }}">B&B</a></li>
-                <li class="{{$thisPage == 'weddings'?'active':''}}"><a href="{{ url('weddings') }}">Weddings</a></li>
-                <li class="{{$thisPage == 'bookings'?'active':''}}"><a href="{{ url('bookings') }}">bookings</a></li>
-                <li class="{{$thisPage == 'contact'?'active':''}}"><a href="{{ url('contact') }}">Contact</a></li>
-                <li class="{{$thisPage == 'explore'?'active':''}}"><a href="{{ url('explore') }}">Explore</a></li>
+                <li class="{{$thisPage == 'weddings'?'active':''}}"><a href="{{ url('/weddings') }}">Weddings</a></li>
+                <li class="{{$thisPage == 'bookings'?'active':''}}"><a href="{{ url('/reservations') }}">Bookings</a></li>
+                <li class="{{$thisPage == 'contact'?'active':''}}"><a href="{{ url('/contact') }}">Contact</a></li>
+                <li class="{{$thisPage == 'explore'?'active':''}}"><a href="{{ url('/explore') }}">Explore</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div>

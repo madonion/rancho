@@ -1,27 +1,40 @@
 @extends('layouts.master')
 
 @section('content')
+	<div class="container">
+{{--        <div class="container bandb">
+            <img src="images/heroes/bb_h.jpg" class="img-responsive">
+            <div class="row">
+                <div class="col-md-6 no-gutters-left">
+                    <div class="image-placeholder" style="height: 200px"><a href="gallery/interiors" >interiors</a></div>
+                </div>
+                <div class="col-md-6 no-gutters-right">
+                    <div class="image-placeholder" style="height: 200px"><a href="gallery/gardens" >gardens</a></div>
+                </div>
+                <div class="col-md-6 no-gutters-left">
+                    <div class="image-placeholder" style="height: 200px"><a href="gallery/amenities" >amenities</a></div>
+                </div>
+                <div class="col-md-6 no-gutters-right">
+                    <div class="image-placeholder" style="height: 200px"><a href="gallery/where-to-visit" >where to visit</a></div>
+                </div>
+            </div>
+        </div>--}}
+        <br><br>
+		<p>All our rooms have as standard:  WiFi, free parking and complimentary toiletries. A continental breakfast for two is included in the room price.</p>
+		@foreach($data as $room)
+			<article class="room row">
+				<div class="room-image col-md-6">
+					<img src="http://placehold.it/600x300" class="img-responsive">
+				</div>
+				<div class="room-image col-md-6">
+					<h3 class="room-name">{{$room['name']}}</h3>
+					<p class="room-description">{{$room['description']}}</p>
+					<a href="{{ url($room['url']) }}">More</a><br>
+					<a href="{{ url('reservations/'.str_slug($room['name'],'-')) }}">calendar which send you to the reservation</a>
+				</div>
+			</article>
 
-<div class="container">
-	<p>Our Rooms: all our rooms are special but they are not created equal. The following information will help you find the right room for you</p>
-	<section>
-		<h2>Superior Rooms</h2>
-		<article>
-			<div class="room-img col-md-4">
-				<img src="http://placehold.it/380x200" class="img-responsive">
-			</div>
-			<div class="room-desc col-md-6">
-				<h3>Room One</h3>
-	      		<p>Sleeps: 2 - 4</p>
-	      		<p>Beds:  ... </p>
-	      		<p>Size:    </p>
-	      	</div>
-	      	<div class="room-price col-md-2">
-	      		<span class="price">from &euro; 90</span>&nbsp;&nbsp;
-	      		<a href="{{URL::to('rooms/room-one')}}" class="btn btn-default">Read More</a>
-	      	</div>
-		</article>
-	</section>
-</div>
+		@endforeach
+	</div>
 
 @endsection

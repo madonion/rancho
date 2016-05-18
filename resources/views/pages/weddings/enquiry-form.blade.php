@@ -4,10 +4,7 @@
 
     <div class="container">
         <div class="col-md-5">
-            <h1>Wedding Enquiry Form</h1>
-        </div>
-        <div class="col-md-7">
-            <img src="http://placehold.it/665x480?text=SomeImage?" class="img-responsive" width="665" height="480">
+            <h1>Wedding Enquiries</h1>
         </div>
         <div class="col-md-5">
             <h3>Reservation Enquiries</h3>
@@ -22,7 +19,7 @@
             {{Form::text('email')}}
             <br>
             {{Form::label('subject', 'Subject')}}
-            {{Form::text('subject','Wedding')}}
+            {{Form::text('subject','Wedding enquiry')}}
             <br>
             {{Form::label('message', 'Message')}}
             {{Form::textarea('message')}}

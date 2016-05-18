@@ -18,6 +18,15 @@ elixir(function(mix) {
 */
 
 elixir(function(mix) {
+  mix.browserSync(
+      {
+        proxy:"rancho.app",
+        logPrefix: "Laravel Elixir BrowserSync",
+        logConnections: false,
+        reloadOnRestart: false,
+        notify: false
+      }
+  );
   var bootstrapPath = 'node_modules/bootstrap-sass/assets';
   mix.sass('app.scss')
     .copy(bootstrapPath + '/fonts', 'public/fonts')

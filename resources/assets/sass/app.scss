@@ -94,6 +94,11 @@ ul.room-icons{list-style-type:none;margin:5px;}
 ul.room-icons li{display: inline;margin:5px;}
 
 /*header*/
+.title-container{
+  min-height: 2em;
+}
+h1.title{display:inline}
+h1.title,span.vtar{font-size: .8em}
 .logo{padding: 2em}
 
 nav.navbar{
@@ -147,12 +152,12 @@ p.description{
     bottom: 0;
     left: 15px;
     right: 15px;
-    transition: 0.5s ease;
+    //transition: 0.5s ease;
   }
    &:hover{
      .overlay{
        background: rgba(0,0,0,.5);
-       transition: 0.5s ease;
+       //transition: 0.5s ease;
      }
      span{
         visibility: visible;
@@ -164,8 +169,7 @@ p.description{
         color: white;
         font-size: 48px;
         font-weight: bold;
-        text-shadow: 1px 3px 2px #000;
-       transition: 0.2s ease;
+       //transition: 0.2s ease;
       }
    }
 }
@@ -186,6 +190,7 @@ about page*/
     transform:scale(1.4,1);
     -webkit-transform:scale(1.4,1);
     right: -.2em;
+    visibility: hidden;
   }
 }
 div.about-text{
@@ -196,7 +201,7 @@ div.about-text{
 
 /*
 weddings*/
-h2{font-size: 1.1em; font-weight: bold; padding: 2em 1em .5em 1em;}
+.weddings h2{font-size: 1.1em; font-weight: bold; padding: 2em 1em .5em 1em;}
 ul.dashed{
   list-style-type: none;
   padding: 0 1em;
@@ -221,6 +226,7 @@ ul.dashed{
     transform: scale(1, 1);
     -webkit-transform: scale(1, 1);
     right: .1em;
+    visibility: hidden;
   }
 }
 div.weddings-text{
@@ -232,7 +238,7 @@ div.weddings-text{
 
 /*
 location*/
-h2{font-size: 1.1em; font-weight: bold; padding: 2em 1em .5em 1em;}
+.location h2{font-size: 1.1em; font-weight: bold; padding: 2em 1em .5em 1em;}
 .location-container{
   position: relative;
   h1{
@@ -248,6 +254,7 @@ h2{font-size: 1.1em; font-weight: bold; padding: 2em 1em .5em 1em;}
     transform: scale(1, 1);
     -webkit-transform: scale(1, 1);
     right: .1em;
+    visibility: hidden;
   }
 }
 div.location-text{
@@ -267,7 +274,7 @@ div.location {
 
 /*
 press -reviews*/
-h2{font-size: 1.1em; font-weight: bold; padding: 2em 1em .5em 1em;}
+.press h2{font-size: 1.1em; font-weight: bold; padding: 2em 1em .5em 1em;}
 .press-container{
   position: relative;
   h1{
@@ -282,6 +289,7 @@ h2{font-size: 1.1em; font-weight: bold; padding: 2em 1em .5em 1em;}
     transform: scale(1, 1);
     -webkit-transform: scale(1, 1);
     right: -.2em;
+    visibility: hidden;
   }
 }
 div.press-text{
@@ -334,7 +342,7 @@ contact*/
     width: 30em;
     float: right;
   }
-  .btn{
+  .btn-send{
     margin: 50px 20px;
     width: 110px;
     height: 45px;
@@ -342,5 +350,73 @@ contact*/
     font-size: 26px;
     font-weight: bold;
     background: #484e52;
+  }
+  .form-group{
+    input.form-control,textarea.form-control{
+      border: none;
+      background: #d9d9d9;
+    }
+  }
+}
+
+/*
+rooms-selection page, rooms*/
+
+article.room{
+  margin: 1em 0;
+  h3 {font-size: 1.2em; text-transform: uppercase}
+  overflow: hidden;
+}
+aside.info-sidebar{
+  border: 1px solid #dadada;
+}
+
+.no-gutters-right{
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.no-gutters-left{
+  padding-right: 0;
+  margin-right: 0;
+}
+
+.image-placeholder{
+  background: #cdcdcd;
+  margin: 2px;
+  padding: 0;
+  text-align: center;
+  vertical-align: middle;
+  a{
+    color: white;
+    font-size: 4em;
+  }
+}
+
+/*
+wedding walkthrough*/
+.walkthorough-step{
+  padding-top: 2em;
+  overflow: hidden;
+}
+
+
+/*partial wedding enquiry*/
+
+.wedding-enq {
+  overflow: auto;
+  .form-control {
+    width: 55%;
+    float: right;
+  }
+  input.form-control,textarea.form-control{
+    border: none;
+    background: #d9d9d9;
+  }
+  .form-group{
+    overflow: hidden;
+  }
+  label{
+    max-width: 45%;
   }
 }

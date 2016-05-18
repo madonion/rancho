@@ -3,7 +3,8 @@
 @section('content')
 
 <div class="container">
-	<h1>bookings</h1>
+	<p>All our rooms have as standard:  WiFi, free parking and complimentary toiletries. A continental breakfast for two is included in the room price.</p>
+
 </div>
 
 @endsection
