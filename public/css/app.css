@@ -5754,14 +5754,9 @@ p {
   font-size: 1em;
   text-align: justify; }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  /* Remove the padding we set earlier */
-  .masthead,
-  .marketing,
-  .footer {
-    padding-right: 0;
-    padding-left: 0; } }
+/* footer */
+footer {
+  padding-top: 2em; }
 
 /* Social */
 .social {
@@ -6122,5 +6117,15 @@ wedding walkthrough*/
     overflow: hidden; }
   .wedding-enq label {
     max-width: 45%; }
+
+/* mobile */
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .masthead,
+  .marketing,
+  .footer {
+    padding-right: 0;
+    padding-left: 0; } }
 
 /*# sourceMappingURL=app.css.map */

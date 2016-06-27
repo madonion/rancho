@@ -25,7 +25,6 @@
     
         @yield('content')
 
-        @include('layouts.partials._bottom_navigation')
     
         @include('layouts.partials._footer')
     

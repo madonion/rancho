@@ -1,4 +1,5 @@
 <footer>
+	@include('layouts.partials._bottom_navigation')
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
