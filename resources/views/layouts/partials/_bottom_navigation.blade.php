@@ -5,7 +5,7 @@
         <ul class="nav navbar-nav">
             <li class="{{$thisPage == 'about'?'active':''}}"><a href="{{ url('about') }}">About</a></li>
             <li class="{{$thisPage == 'press-reviews'?'active':''}}"><a href="{{ url('press-reviews') }}">Reviews</a></li>
-            <li class="{{$thisPage == 'weddings'?'active':''}}"><a href="{{ url('weddings') }}">Terms & Conditions</a></li>
+            <li class="{{$thisPage == 'weddings'?'active':''}}"><a href="{{ url('terms') }}">Terms & Conditions</a></li>
             <li class="{{$thisPage == 'location'?'active':''}}"><a href="{{ url('location') }}">Location</a></li>
             <li class="{{$thisPage == 'sitemap'?'active':''}}"><a href="{{ url('sitemap') }}">Sitemap</a></li>
         </ul>

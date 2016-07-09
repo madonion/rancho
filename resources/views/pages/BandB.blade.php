@@ -3,10 +3,10 @@
 @section('content')
 
 <div class="container bandb">
-	<img src="images/heroes/bb_h.jpg" class="img-responsive">
+	@include('layouts.partials._hero',['hero' =>'bb_h.jpg'])
 	<div class="row">
 		<div class="col-md-6 no-gutters-left">
-			<div class="image-placeholder" style="height: 200px"><a href="<?= url('/rooms')?>" >interiors</a></div>
+			<div class="image-placeholder" style="height: 200px"><a href="<?= url('accommodations')?>" >interiors</a></div>
 		</div>
 		<div class="col-md-6 no-gutters-right">
 			<div class="image-placeholder" style="height: 200px"><a href="gallery/gardens" >gardens</a></div>

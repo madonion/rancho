@@ -90,9 +90,8 @@ ul.room-icons li{display: inline;margin:5px;}
 .title-container{
   min-height: 2em;
 }
-h1.title{display:inline}
-h1.title,span.vtar{font-size: .8em}
-.logo{padding: 2em}
+h1.title,span.vtar {font-size: .7em; margin: 0; padding: 5px}
+.logo{margin: 1.2em}
 
 nav.navbar{
   background: none;
@@ -413,6 +412,29 @@ wedding walkthrough*/
     max-width: 45%;
   }
 }
+
+
+/*
+bandb*/
+.bandb{
+  padding-left: 30px;
+  padding-right: 30px;
+  .carousel-control .icon-next,.carousel-control .glyphicon-chevron-right {
+    right: 5px;
+  }
+  .carousel-control.right {
+    right: -30px;
+    background: none;
+  }
+  .carousel-control .icon-prev,.carousel-control .glyphicon-chevron-left {
+    left: 5px;
+  }
+  .carousel-control.left {
+    left: -30px;
+    background: none;
+  }
+}
+
 
 /* mobile */
 

@@ -5825,14 +5825,13 @@ ul.room-icons li {
 .title-container {
   min-height: 2em; }
 
-h1.title {
-  display: inline; }
-
 h1.title, span.vtar {
-  font-size: .8em; }
+  font-size: .7em;
+  margin: 0;
+  padding: 5px; }
 
 .logo {
-  padding: 2em; }
+  margin: 1.2em; }
 
 nav.navbar {
   background: none;
@@ -6117,6 +6116,22 @@ wedding walkthrough*/
     overflow: hidden; }
   .wedding-enq label {
     max-width: 45%; }
+
+/*
+bandb*/
+.bandb {
+  padding-left: 30px;
+  padding-right: 30px; }
+  .bandb .carousel-control .icon-next, .bandb .carousel-control .glyphicon-chevron-right {
+    right: 5px; }
+  .bandb .carousel-control.right {
+    right: -30px;
+    background: none; }
+  .bandb .carousel-control .icon-prev, .bandb .carousel-control .glyphicon-chevron-left {
+    left: 5px; }
+  .bandb .carousel-control.left {
+    left: -30px;
+    background: none; }
 
 /* mobile */
 /* Responsive: Portrait tablets and up */

@@ -21,20 +21,11 @@
         </div>--}}
         <br><br>
 		<p>All our rooms have as standard:  WiFi, free parking and complimentary toiletries. A continental breakfast for two is included in the room price.</p>
-		@foreach($data as $room)
-			<article class="room row">
-				<div class="room-image col-md-6">
-					<img src="http://placehold.it/600x300" class="img-responsive">
-				</div>
-				<div class="room-image col-md-6">
-					<h3 class="room-name">{{$room['name']}}</h3>
-					<p class="room-description">{{$room['description']}}</p>
-					<a href="{{ url($room['url']) }}">More</a><br>
-					<a href="{{ url('reservations/'.str_slug($room['name'],'-')) }}">calendar which send you to the reservation</a>
-				</div>
-			</article>
+		@each('pages.rooms.single',$data,'room','view.empty')
 
-		@endforeach
+
+
+
 	</div>
 
 @endsection

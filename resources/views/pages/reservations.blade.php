@@ -2,7 +2,7 @@
 
 @section('content')
 	<div class="container">
-        <p>All our rooms have as standard:  WiFi, free parking and complimentary toiletries. A continental breakfast for two is included in the room price. <a href="{{url('/rooms')}}"><strong>Check our rooms</strong></a></p>
+        <p>All our rooms have as standard:  WiFi, free parking and complimentary toiletries. A continental breakfast for two is included in the room price. <a href="{{url('accommodations')}}"><strong>Check our rooms</strong></a></p>
 
         <h2>step 1</h2>
 

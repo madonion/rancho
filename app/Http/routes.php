@@ -12,14 +12,16 @@
 */
 
 
-
 Route::get('/', function () {return view('pages/home');});
-Route::get('/rooms','roomsController@index');
-Route::get('/rooms/{id}','roomController@index');
+
+Route::get('/accommodations','accommodationsController@index');
+Route::get('/accommodations/{slug}','accommodationsController@getAccommodation');
+
 Route::get('/reservations','reservationsController@index');
 Route::get('/reservations/{id}','reservationsController@preSelected');
+
 Route::get('/B&B', function () {return view('pages/BandB');});
-Route::get('/weddings', function () {return view('pages/weddings');});
+//Route::get('/weddings', function () {return view('pages/weddings');});
 Route::get('/amenities', function () {return view('pages/amenities');});
 Route::get('/explore', function () {return view('pages/explore');});
 Route::get('/bookings', function () {return view('pages/bookings');});
@@ -34,20 +36,29 @@ Route::get('/terms', function () {return view('pages/terms');});
 Route::get('/links', function () {return view('pages/links');});
 
 Route::get('/contact', function () {return view('pages/contact');});
-
 Route::post('/contact', function () {return view('pages/contact');});
 
-Route::get('/gallery', function () {return view('pages/gallery');});
-Route::get('/gallery/ceremony', function () {return view('pages/gallery/ceremony');});
-Route::get('/gallery/coctails', function () {return view('pages/gallery/coctails');});
-Route::get('/gallery/food-drink', function () {return view('pages/gallery/food-drink');});
-Route::get('/gallery/bar-dancing', function () {return view('pages/gallery/bar-dancing');});
-Route::get('/weddings/enquiry-form', function () {return view('pages/weddings/enquiry-form');});
-Route::post('/weddings/enquiry-form', function () {return view('pages/weddings/enquiry-form');});
-Route::get('/weddings/pricing', function () {return view('pages/weddings/pricing');});
-Route::get('/weddings/food-and-drink', function () {return view('pages/weddings/food-and-drink');});
-Route::get('/weddings/cocktails', function () {return view('pages/weddings/cocktails');});
-Route::get('/weddings/walkthrough', function () {return view('pages/weddings/walkthrough');});
+Route::group(['prefix'=>'gallery'],function (){
+    Route::get('/', function () {return view('pages/gallery');});
+    Route::get('/ceremony', function () {return view('pages/gallery/ceremony');});
+    Route::get('/coctails', function () {return view('pages/gallery/coctails');});
+    Route::get('/food-drink', function () {return view('pages/gallery/food-drink');});
+    Route::get('/gallery/bar-dancing', function () {return view('pages/gallery/bar-dancing');});
+});
+
+
+
+
+
+Route::group(['prefix'=>'weddings'],function (){
+    Route::get('/', 'weddingsController@index');
+    Route::get('pricing', ['as'=>'pricing'], function () {return view('pages/weddings/pricing');});
+    Route::get('food-and-drink', function () {return view('pages/weddings/food-and-drink');});
+    Route::get('cocktails', function () {return view('pages/weddings/cocktails');});
+    Route::get('walkthrough', function () {return view('pages/weddings/walkthrough');});
+    Route::get('enquiry-form', function () {return view('pages/weddings/enquiry-form');});
+});
+
 
 
 /*
