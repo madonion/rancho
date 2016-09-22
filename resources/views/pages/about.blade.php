@@ -18,3 +18,9 @@
 </div>
 
 @endsection
+@section('script')
+    <script>
+        $("h1").lettering();
+        $('h1').fitText(.43);
+    </script>
+@endsection

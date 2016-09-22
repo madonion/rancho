@@ -52,7 +52,7 @@ Route::group(['prefix'=>'gallery'],function (){
 
 Route::group(['prefix'=>'weddings'],function (){
     Route::get('/', 'weddingsController@index');
-    Route::get('pricing', ['as'=>'pricing'], function () {return view('pages/weddings/pricing');});
+    Route::get('pricing',['as'=>'pricing', function () {return view('pages/weddings/pricing');}]);
     Route::get('food-and-drink', function () {return view('pages/weddings/food-and-drink');});
     Route::get('cocktails', function () {return view('pages/weddings/cocktails');});
     Route::get('walkthrough', function () {return view('pages/weddings/walkthrough');});
@@ -60,6 +60,10 @@ Route::group(['prefix'=>'weddings'],function (){
 });
 
 
+Route::group(array('prefix' => 'api/v1'), function()
+{
+    Route::resource('bookings','BookingsController');
+});
 
 /*
 |--------------------------------------------------------------------------

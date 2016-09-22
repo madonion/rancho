@@ -11,6 +11,8 @@ var elixir = require('laravel-elixir');
  |
  */
 
+require('laravel-elixir-vueify');
+
 /*elixir(function(mix) {
     mix.sass('app.scss');
 });*/
@@ -29,4 +31,5 @@ elixir(function(mix) {
   mix.sass('app.scss')
     .copy(bootstrapPath + '/fonts', 'public/fonts')
     .copy(bootstrapPath + '/javascripts/bootstrap.min.js', 'public/js');
+    mix.browserify('main.js');
 });

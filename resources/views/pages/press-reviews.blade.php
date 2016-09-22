@@ -5,7 +5,7 @@
 	<div class="container press">
 		<div class="press-container">
 			<img src="images/heroes/press-reviews.jpg" class="img-responsive">
-			<h1>PRESS & REVIEWS</h1>
+			<h1>PRESS&nbsp;&&nbsp;REVIEWS</h1>
 		</div>
 		<div class="press-text">
 			<p>Alastair Sawday’s review of Rancho Del Ingles can be found here -</p>
@@ -15,4 +15,10 @@
 		</div>
 	</div>
 
+@endsection
+@section('script')
+	<script>
+		$("h1").lettering();
+		$('h1').fitText(.8);
+	</script>
 @endsection

@@ -8,6 +8,13 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'ctaile';
+  src: url('../fonts/ctaileb.eot');
+  src: local('☺'), url('../fonts/ctaileb.woff') format('woff'), url('../fonts/ctaileb.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
 
 
 body{
@@ -144,12 +151,10 @@ p.description{
     bottom: 0;
     left: 15px;
     right: 15px;
-    //transition: 0.5s ease;
   }
    &:hover{
      .overlay{
        background: rgba(0,0,0,.5);
-       //transition: 0.5s ease;
      }
      span{
         visibility: visible;
@@ -161,7 +166,6 @@ p.description{
         color: white;
         font-size: 48px;
         font-weight: bold;
-       //transition: 0.2s ease;
       }
    }
 }
@@ -171,18 +175,18 @@ about page*/
   position: relative;
   h1{
     position: absolute;
-    bottom: -.38em;
-    display: inline-block;
+    bottom: -.34em;
     width: 100%;
     text-align: center;
     color: white;
-    font-size: 10em;
-    font-weight: bold;
-    letter-spacing: 50px;
-    transform:scale(1.4,1);
-    -webkit-transform:scale(1.4,1);
-    right: -.2em;
-    visibility: hidden;
+    font-size: 11em;
+    span{
+      padding-right: .31em;
+      &:last-child{
+        padding: 0;
+      }
+    }
+    left: -.07em;
   }
 }
 div.about-text{
@@ -213,12 +217,8 @@ ul.dashed{
     text-align: center;
     color: white;
     font-size: 10em;
-    font-weight: bold;
     letter-spacing: 21px;
-    transform: scale(1, 1);
-    -webkit-transform: scale(1, 1);
     right: .1em;
-    visibility: hidden;
   }
 }
 div.weddings-text{
@@ -246,7 +246,6 @@ location*/
     transform: scale(1, 1);
     -webkit-transform: scale(1, 1);
     right: .1em;
-    visibility: hidden;
   }
 }
 div.location-text{
@@ -271,17 +270,19 @@ press -reviews*/
   position: relative;
   h1{
     position: absolute;
-    bottom: -.38em;
-    display: inline-block;
-    width: 105%;
+    bottom: -.34em;
+    width: 100%;
     text-align: center;
     color: white;
-    font-size: 7.3em;
+    font-size: 6em;
     font-weight: bold;
-    transform: scale(1, 1);
-    -webkit-transform: scale(1, 1);
-    right: -.2em;
-    visibility: hidden;
+    span{
+      padding-right: .01em;
+      &:last-child{
+        padding: 0;
+      }
+    }
+    left: -.1em;
   }
 }
 div.press-text{
@@ -356,7 +357,7 @@ rooms-selection page, rooms*/
 
 article.room{
   margin: 1em 0;
-  h3 {font-size: 1.2em; text-transform: uppercase}
+  h3 {font-size: 1.2em; font-weight: bold; text-transform: uppercase}
   overflow: hidden;
 }
 aside.info-sidebar{
@@ -373,16 +374,81 @@ aside.info-sidebar{
   margin-right: 0;
 }
 
-.image-placeholder{
-  background: #cdcdcd;
-  margin: 2px;
-  padding: 0;
+.ib{
+  height: 150px;
+  background-position: center;
+  background-size: cover;
   text-align: center;
-  vertical-align: middle;
-  a{
-    color: white;
-    font-size: 4em;
+  text-transform: uppercase;
+  .overlay{
+    background: rgba(0,0,0,0);
+    position: absolute;
+    vertical-align: middle;
+    top:0;
+    bottom: 0;
+    left: 15px;
+    right: 15px;
   }
+  span{
+    left: 0;
+    position:absolute;
+    text-align:center;
+    width: 100%;
+    color: white;
+    font-size: 1.6em;
+    font-weight: bold;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &:hover{
+    .overlay{
+      background: rgba(0,0,0,.5);
+      visibility: visible;
+      vertical-align: middle;
+    }
+    span{
+      visibility: visible;
+      left: 0;
+      position:absolute;
+      text-align:center;
+      width: 100%;
+      color: white;
+      font-size: 48px;
+      font-weight: bold;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+.no-gutters-right .overlay{
+  left: 0;
+}
+.no-gutters-left .overlay{
+  right: 0;
+}
+.ib-accommodation{
+  background-image: url("/images/interiors.jpg");
+}
+.ib-gardens{
+  background-image: url("/images/gardens.jpg");
+}
+.ib-amenities{
+  background-image: url("/images/amenities.jpg");
+}
+.ib-where-to-visit{
+  background-image: url("/images/where-to-visit.jpg");
+}
+.ib-walkthrough{
+  background-image: url("/images/walkthrough.jpg");
+}
+.ib-cocktails{
+  background-image: url("/images/cocktails.jpg");
+}
+.ib-pricing{
+  background-image: url("/images/pricing.jpg");
+}
+.ib-food-and-drink{
+  background-image: url("/images/food-and-drink.jpg");
 }
 
 /*
@@ -447,4 +513,15 @@ bandb*/
     padding-right: 0;
     padding-left: 0;
   }
+  .ib{
+    height: 250px;
+    .overlay {
+      visibility: hidden;
+    }
+  }
+}
+/* rooms */
+.room-description{
+  line-height: 1.5em;
+  max-height: 10em;
 }

@@ -30,4 +30,8 @@ class reservationsController extends Controller
     public function preSelected($id){
         return 'make a reservation for ' . $id;
     }
+
+    public  function calendar(){
+        
+    }
 }

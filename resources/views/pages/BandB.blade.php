@@ -5,17 +5,41 @@
 <div class="container bandb">
 	@include('layouts.partials._hero',['hero' =>'bb_h.jpg'])
 	<div class="row">
-		<div class="col-md-6 no-gutters-left">
-			<div class="image-placeholder" style="height: 200px"><a href="<?= url('accommodations')?>" >interiors</a></div>
+		<div class="col-sm-7 col-xs-7 no-gutters-left">
+            <a href="<?= url('accommodations')?>" >
+                <div class="ib ib-accommodation">
+                    <div class="overlay">
+                        <span>interiors</span>
+                    </div>
+                </div>
+            </a>
 		</div>
-		<div class="col-md-6 no-gutters-right">
-			<div class="image-placeholder" style="height: 200px"><a href="gallery/gardens" >gardens</a></div>
-		</div>
-        <div class="col-md-6 no-gutters-left">
-            <div class="image-placeholder" style="height: 200px"><a href="gallery/amenities" >amenities</a></div>
+		<div class="col-md-5 col-xs-5 no-gutters-right">
+            <a href="<?= url('gallery/gardens')?>" >
+                <div class="ib ib-gardens">
+                    <div class="overlay">
+                        <span>gardens</span>
+                    </div>
+                </div>
+            </a>
         </div>
-        <div class="col-md-6 no-gutters-right">
-            <div class="image-placeholder" style="height: 200px"><a href="gallery/where-to-visit" >where to visit</a></div>
+        <div class="col-md-5 col-xs-5 no-gutters-left">
+            <a href="gallery/amenities" >
+                <div class="ib ib-amenities">
+                    <div class="overlay">
+                        <span>amenities</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-7  col-xs-7 no-gutters-right">
+            <a href="gallery/" >
+                <div class="ib ib-where-to-visit">
+                    <div class="overlay">
+                        <span>where to visit</span>
+                    </div>
+                </div>
+            </a>
         </div>
 	</div>
 </div>

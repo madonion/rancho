@@ -10,9 +10,9 @@
 
 <article class="room row">
     <div class="room-image col-md-6">
-        <img src="http://placehold.it/600x300" class="img-responsive">
+        <img src="/images/rooms/{{$room->slug}}/1.jpg" class="img-responsive">
     </div>
-    <div class="room-image col-md-6">
+    <div class="col-md-6">
         <h3 class="room-name">{{$room->name}}</h3>
         <p class="room-description">{{$room->description}}</p>
         <a href="{{ url($room->slug) }}">More</a><br>
